@@ -312,4 +312,8 @@ body {
 .body-mujer {
   background-image: url("fotos/fondo.jpg");
 }
+.filtros, .tarjeta {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);           
+}
   
