@@ -308,3 +308,8 @@ body {
   margin-left: 80%;
   color: white;
 }
+
+.body-mujer {
+  background-image: url("fotos/fondo.jpg");
+}
+  
