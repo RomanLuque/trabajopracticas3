@@ -340,6 +340,22 @@ body {
 }
 
 /* Barra de navegación */
+
+
+
+
+
+.encabezado-tienda nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.encabezado-tienda nav a:hover {
+  color: #f39c12;
+}
+
+
 .barra-navegacion {
   background: #ff3c00;
   padding: 15px 20px;
@@ -361,6 +377,10 @@ body {
 }
 
 .barra-navegacion a.activo {
+  color: #ffffff;
+}
+
+.barra-navegacion a:hover {
   color: #ffffff;
 }
 
@@ -444,9 +464,12 @@ body {
   color: #1877f2;
 }
 
-.texto-hover-infantil {
-  margin-left: 80%;
-  color: white;
+.boton-principal-paginas {
+  margin-left: 1800%;
+}
+
+.boton-index-paginas text:hover {
+  background: #ffffff;
 }
 
 .body-mujer {
@@ -501,6 +524,7 @@ body {
   width: 100%;
   border-collapse: collapse;
   margin-top: 3rem;
+  background-color: #ec811c;
 }
 
 .tabla-talles th, .tabla-talles td {
