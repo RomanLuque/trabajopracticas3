@@ -350,3 +350,26 @@ body {
 
 }
 
+
+
+.tabla-talles {
+  margin: 2rem auto;
+  max-width: 700px;
+  text-align: center;
+}
+
+.tabla-talles table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 3rem;
+}
+
+.tabla-talles th, .tabla-talles td {
+  border: 3px solid #ccc;
+  padding: 0.6rem;
+}
+
+.tabla-talles th {
+  background-color: #f2f2f2;
+}
+
