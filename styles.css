@@ -1,4 +1,4 @@
-/* RESET GLOBAL */
+/* ========= RESET GLOBAL ========= */
 * {
   margin: 0;
   padding: 0;
@@ -104,8 +104,6 @@ body.pagina-tienda {
   background-image: url(fondo2.gif);
 }
 
-
-
 /* HEADER */
 .encabezado-tienda {
   display: flex;
@@ -115,15 +113,18 @@ body.pagina-tienda {
   background: #ff3c00;
   color: white;
 }
+
 .logo-tienda {
   font-size: 24px;
   font-weight: bold;
 }
+
 .encabezado-tienda nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
 }
+
 .encabezado-tienda nav a {
   text-decoration: none;
   color: white;
@@ -141,6 +142,7 @@ body.pagina-tienda {
   gap: 20px;
   padding: 20px;
 }
+
 .categoria-tienda {
   position: relative;
   overflow: hidden;
@@ -158,12 +160,14 @@ body.pagina-tienda {
   margin: 15px 0;
   font-size: 22px;
 }
+
 .subcategorias-tienda {
   display: flex;
   justify-content: center;
   gap: 15px;
   padding: 15px;
 }
+
 .subcategorias-tienda a {
   padding: 8px 15px;
   border: 1px solid black;
@@ -187,7 +191,6 @@ body.pagina-tienda {
   margin-top: 10px;
 }
 
-
 .foto-categoria {
   height: 80%;
   width: 100%;
@@ -203,7 +206,135 @@ body.pagina-tienda {
 }
 
 
-/* ========= Pagina infantil ========= */
+/* FOOTER PAGINAS */
+.footer-tabla {
+  background: #000;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.footer-tabla table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.footer-tabla td {
+  vertical-align: top;
+  padding: 0 20px;
+  width: 25%;
+}
+
+.footer-tabla h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.footer-tabla ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-tabla ul li {
+  margin-bottom: 8px;
+}
+
+.footer-tabla a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-tabla a:hover {
+  color: #ff3c00;
+}
+
+.btn-arrepentimiento {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.btn-arrepentimiento:hover {
+  background: #fff;
+  color: #000;
+}
+
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  margin-right: 60%;
+}
+
+.footer-social a img {
+  width: 70px;
+  height: auto;
+}
+
+.footer-pagos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+    margin-right: 45%;
+}
+
+
+.footer-pagos img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.footer-tabla form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-tabla input {
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+}
+
+.footer-tabla button {
+  padding: 8px;
+  background: #ff3c00;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.footer-tabla button:hover {
+  background: #ff9a27;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  margin-top: 30px;
+  padding-top: 15px;
+  font-size: 12px;
+}
+
+.footer-bottom a {
+  color: #ff3c00;
+  text-decoration: none;
+}
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+
+/* ========= PÁGINA INFANTIL Y MUJER ========= */
 body {
   background: #eeeeee;
 }
@@ -214,6 +345,7 @@ body {
   padding: 15px 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 .barra-navegacion ul {
   list-style: none;
   display: flex;
@@ -221,11 +353,13 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .barra-navegacion a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
 }
+
 .barra-navegacion a.activo {
   color: #ffffff;
 }
@@ -244,6 +378,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 .filtros h3 {
   margin-bottom: 10px;
 }
@@ -256,6 +391,7 @@ body {
   gap: 20px;
   margin-left: 20px;
 }
+
 .tarjeta {
   background: white;
   padding: 15px;
@@ -263,18 +399,22 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
+
 .tarjeta img {
   height: 65%;
   max-width: 100%;
   border-radius: 6px;
 }
+
 .tarjeta h4 {
   margin: 10px 0;
 }
+
 .tarjeta p {
   color: #1877f2;
   font-weight: bold;
 }
+
 .tarjeta button {
   background: #1877f2;
   color: white;
@@ -294,7 +434,7 @@ body {
   background: none;
   border: none;
   padding: 0;
-  color: #333;   
+  color: #333;
   cursor: pointer;
   text-align: left;
 }
@@ -313,9 +453,10 @@ body {
   background-image: url("fotos/fondo.jpg");
 }
 
-.filtros, .tarjeta {
+.filtros,
+.tarjeta {
   background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(5px);           
+  backdrop-filter: blur(5px);
 }
 
 .contenedor-video {
@@ -327,9 +468,9 @@ body {
 
 .contenedor-video h1 {
   margin-bottom: 20px;
-  font-size: 3.5rem;   
-  color: #222;        
-  text-transform: uppercase; 
+  font-size: 3.5rem;
+  color: #222;
+  text-transform: uppercase;
 }
 
 .contenedor-video video {
@@ -340,13 +481,11 @@ body {
 }
 
 .info-destacada {
-  background-color: #e2a0a0;        
+  background-color: #e2a0a0;
   padding: 28px;
   border-radius: 10px;
   margin: 0 auto 25px auto;
   max-width: 900px;
   text-align: center;
-  font-size: 1.5rem
-
+  font-size: 1.5rem;
 }
-  
