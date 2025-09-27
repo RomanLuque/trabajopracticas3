@@ -348,6 +348,12 @@ body.Hombres footer.footer-tabla h3 {
   color: #ffcc00;
 }
 
+/* ========= PÁGINA CALZADO ========= */
+
+.body-calzado {
+  background-image: url("fotos/fondo.footer-calzado.jpg");
+}
+
 /* ========= PÁGINA INFANTIL Y MUJER ========= */
 body {
   background: #eeeeee;
@@ -547,3 +553,74 @@ body {
 }
 
 
+/* SEGUNDO FOOTER */
+.foooter {
+  background-color: #323232;  /* Fondo negro ocupa todo el ancho */
+  color: #fff;
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+
+
+.foooter-contenedor {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1100px;  /* Limita el ancho del contenido */
+  margin: auto;       /* Centra el contenido */
+}
+
+.foooter-columna {
+  flex: 1;
+  min-width: 220px;   /* Se achica un poco para que no se estiren demasiado */
+  margin: 20px;
+}
+
+.foooter-columna h3, 
+.foooter-columna h4 {
+  margin-bottom: 15px;
+  color: #ff2f00;
+}
+
+.foooter-columna ul {
+  list-style: none;
+  padding: 0;
+}
+
+.foooter-columna ul li {
+  margin: 8px 0;
+}
+
+.foooter-columna ul li a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.foooter-columna ul li a:hover {
+  color: #fff;
+}
+
+.redes a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.redes img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.redes img:hover {
+  transform: scale(1.2);
+}
+
+.foooter-copy {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #aaa;
+}
