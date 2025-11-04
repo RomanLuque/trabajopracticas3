@@ -12,10 +12,10 @@
     <div class="logo-tienda">Zona Outfit</div>
     <nav>
       <ul>
-        <li><a href="hombre.html">Hombre</a></li>
-        <li><a href="paginamujer.html">Mujer</a></li>
-        <li><a href="calzado.html">Calzado</a></li>
-        <li><a href="paginainfantil.html">Infantil</a></li>
+        <li><a href="hombre.php">Hombre</a></li>
+        <li><a href="paginamujer.php">Mujer</a></li>
+        <li><a href="calzado.php">Calzado</a></li>
+        <li><a href="paginainfantil.php">Infantil</a></li>
       </ul>
     </nav>
   </header>
@@ -26,9 +26,9 @@
       <img src="principalvideooo.gif" class="foto-categoria" alt="Indumentaria">
       <h2>Indumentaria</h2>
       <div class="subcategorias-tienda">
-        <a href="hombre.html">Hombre</a>
-        <a href="paginamujer.html">Mujer</a>
-        <a href="paginainfantil.html">Infantil</a>
+        <a href="hombre.php">Hombre</a>
+        <a href="paginamujer.php">Mujer</a>
+        <a href="paginainfantil.php">Infantil</a>
       </div>
     </div>
 
@@ -36,9 +36,9 @@
       <img src="zapatillas_video.gif" class="foto-categoria" alt="Calzado">
       <h2>Calzado</h2>
       <div class="subcategorias-tienda">
-        <a href="paginadeport.html">Deportivo</a>
-        <a href="paginacasual.html">Casual</a>
-        <a href="paginabotas.html">Botas</a>
+        <a href="paginadeport.php">Deportivo</a>
+        <a href="paginacasual.php">Casual</a>
+        <a href="paginabotas.php">Botas</a>
       </div>
     </div>
   </section>

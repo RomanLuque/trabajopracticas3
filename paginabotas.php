@@ -9,16 +9,17 @@
 <body class="body-calzado">
 <nav class="barra-navegacion">
 <ul>
-        <li><a href="paginacasual.html" class="activo">Casual</a></li>
-        <li><a href="hombre.html">Hombre</a></li>
-        <li><a href="paginamujer.html">Mujer</a></li>
-        <li><a href="paginainfantil.html">Infantil</a></li>
-        <li><a href="paginabotas.html">Botas</a></li>
-        <li><a href="paginadeport.html">Deportivo</a></li>
-        <li><a class="boton-principal-paginas" href="paginaprincipal.html">ZonaOutfit</a></li>
+        <li><a href="paginabotas.php" class="activo">Botas</a></li>
+        <li><a href="hombre.php">Hombre</a></li>
+        <li><a href="paginamujer.php">Mujer</a></li>
+        <li><a href="paginainfantil.php">Infantil</a></li>
+        <li><a href="paginacasual.php">Casual</a></li>
+        <li><a href="paginadeport.php">Deportivo</a></li>
+        <li><a class="boton-principal-paginas" href="paginaprincipal.php">ZonaOutfit</a></li>
 </ul>
 
 </nav>
+
 
 <div class="contenedor">
 <aside class="filtros">
@@ -30,47 +31,45 @@
         <button>Rango de precio</button>
 </div>
         </aside>
-        <main class="productos">
+        
 
+
+
+<main class="productos">
 <div class="tarjeta">
-        <img src="fotos/calcasual/Adidasblanc.jpg" alt="CasualBlancAdidas">
-        <h4>Zapatillas bancas Adidas</h4>
-        <p>$20.000</p>
+        <img src="fotos/calbotas/femmarronlargo.png" alt="BotasFemMarronLarg">
+        <h4>Botas femeninas marron largas</h4>
+        <p>$40.000</p>
         <button>Agregar al carrito</button>
 </div>
-
 <div class="tarjeta">
-        <img src="fotos/calcasual/Adidaslinroj.jpg" alt="CasualBlancLineasRojAdidas">
-        <h4>Zatillas blancas y rojas Adidas</h4>
-        <p>$23.000</p>
+        <img src="fotos/calbotas/mascmarron.png" alt="BotasMascMarronCort">
+        <h4>Botas masculinas marron cortas</h4>
+        <p>$39.000</p>
         <button>Agregar al carrito</button>
 </div>
-
 <div class="tarjeta">
-        <img src="fotos/calcasual/Adidasmarron.jpg" alt="CasualmarronAdidas">
-        <h4>Zapatillas marron Adidas</h4>
-        <p>$25.500</p>
+        <img src="fotos/calbotas/femnegcort.png" alt="BotasFemNegCort">
+        <h4>Botas femeninas negras cortas</h4>
+        <p>$50.500</p>
         <button>Agregar al carrito</button>
 </div>
-
 <div class="tarjeta">
-        <img src="fotos/calcasual/Adidasnegr.jpg" alt="CasualnrgAdidas">
-        <h4>Zapatillas negras Adidas</h4>
-        <p>$22.000</p>
+        <img src="fotos/calbotas/femneglarg.png" alt="BotasFemNegLarg">
+        <h4>Botas Femeninas Marron Largas</h4>
+        <p>$60.000</p>
         <button>Agregar al carrito</button>
 </div>
-
 <div class="tarjeta">
-        <img src="fotos/calcasual/Nblanc.jpg" alt="CasualBlancN">
-        <h4>Zapatillas Blancas N</h4>
-        <p>$21.300</p>
+        <img src="fotos/calbotas/mascneg.png" alt="BotasMascNegCort">
+        <h4>Botas masculinas negras cortas</h4>
+        <p>$42.250</p>
         <button>Agregar al carrito</button>
 </div>
-
 <div class="tarjeta">
-        <img src="fotos/calcasual/Nikenegr.png" alt="CasualngrNike">
-        <h4>Zapatillas negras Nike</h4>
-        <p>$24.500</p>
+        <img src="fotos/calbotas/mixverd.png" alt="Botasmixverdcort">
+        <h4>Botas mixtas verde cortas</h4>
+        <p>$55.000</p>
         <button>Agregar al carrito</button>
 </div>
 
@@ -92,10 +91,10 @@
 <div class="foooter-columna">
         <h4>Enlaces útiles</h4>
 <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="hombre.html">Hombre</a></li>
-        <li><a href="mujer.html">Mujer</a></li>
-        <li><a href="infantil.html">Infantil</a></li>
+        <li><a href="index.php">Inicio</a></li>
+        <li><a href="hombre.php">Hombre</a></li>
+        <li><a href="mujer.php">Mujer</a></li>
+        <li><a href="infantil.php">Infantil</a></li>
         <li><a href="#">Política de privacidad</a></li>
         <li><a href="#">Términos y condiciones</a></li>
 </ul>

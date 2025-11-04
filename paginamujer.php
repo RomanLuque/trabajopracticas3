@@ -9,13 +9,13 @@
 <body class="body-mujer">
   <nav class="barra-navegacion">
     <ul>
-      <li><a href="paginamujer.html" class="activo">Mujer</a></li>
-      <li><a href="paginainfantil.html">Infantil</a></li>
-      <li><a href="hombre.html">Hombre</a></li>
-      <li><a href="paginabotas.html">Botas</a></li>
-      <li><a href="paginacasual.html">Casual</a></li>
-      <li><a href="paginadeport.html">Deportivo</a></li>
-      <li><a class="boton-principal-paginas" href="paginaprincipal.html">ZonaOutfit</a></li>
+      <li><a href="paginamujer.php" class="activo">Mujer</a></li>
+      <li><a href="paginainfantil.php">Infantil</a></li>
+      <li><a href="hombre.php">Hombre</a></li>
+      <li><a href="paginabotas.php">Botas</a></li>
+      <li><a href="paginacasual.php">Casual</a></li>
+      <li><a href="paginadeport.php">Deportivo</a></li>
+      <li><a class="boton-principal-paginas" href="paginaprincipal.php">ZonaOutfit</a></li>
     </ul>
   </nav>
 

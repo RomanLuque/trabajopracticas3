@@ -3,89 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tienda - Hombres</title>
+  <title>Tienda - infantil</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="Hombres">
+<body class="body-infantil">
   <nav class="barra-navegacion">
     <ul>
-      <li><a href="hombre.html" class="activo">Hombre</a></li>
-      <li><a href="paginainfantil.html">Infantil</a></li>
-      <li><a href="paginamujer.html">Mujer</a></li>
-      <li><a href="paginabotas.html">Botas</a></li>
-      <li><a href="paginacasual.html">Casual</a></li>
-      <li><a href="paginadeport.html">Deportivo</a></li>
-      <li><a class="boton-principal-paginas" href="paginaprincipal.html">ZonaOutfit</a></li>
+      <li><a href="paginainfantil.php" class="activo">Infantil</a></li>
+      <li><a href="hombre.php">Hombre</a></li>
+      <li><a href="paginamujer.php">Mujer</a></li>
+      <li><a href="paginabotas.php">Botas</a></li>
+      <li><a href="paginacasual.php">Casual</a></li>
+      <li><a href="paginadeport.php">Deportivo</a></li>
+      <li><a class="boton-principal-paginas" href="paginaprincipal.php">ZonaOutfit</a></li>
     </ul>
- 
   </nav>
 
   <div class="contenedor">
     <aside class="filtros">
       <h3>Filtros</h3>
       <div class="boton-paginainfantil">
-      <button>Categoría</button>
-      <button>Color</button>
-      <button>Género</button>
-      <button>Talle</button>
-      <button>Rango de precio</button>
+        <button>Categoría</button>
+        <button>Color</button>
+        <button>Género</button>
+        <button>Talle</button>
+        <button>Rango de precio</button>
       </div>
     </aside>
 
     <main class="productos">
       <div class="tarjeta">
-        <img src="fotos/hombre/conjuntoUrbano.png" alt="Conjunto Urbano">
-        <h4>Conjunto Urbano</h4>
-        <p>$39.000</p>
+        <img src="fotos/infantil/enteronene.png" alt="Entero nene">
+        <h4>Entero nene</h4>
+        <p>$15.000</p>
         <button>Agregar al carrito</button>
       </div>
 
       <div class="tarjeta">
-        <img src="fotos/hombre/conjuntoFormal.png" alt="conjunto formal">
-        <h4>Conjunto Formal</h4>
-        <p>$59.000</p>
+        <img src="fotos/infantil/enteronena.png" alt="Entero nena">
+        <h4>Entero nena</h4>
+        <p>$15.000</p>
         <button>Agregar al carrito</button>
       </div>
 
       <div class="tarjeta">
-        <img src="fotos/hombre/conjuntoInvierno.png" alt="Conjunto invierno">
-        <h4>Conjunto Invierno</h4>
-        <p>$49.000</p>
+        <img src="fotos/infantil/conjuntouno.png" alt="Conjunto 1">
+        <h4>Conjunto remera + short</h4>
+        <p>$27.500</p>
         <button>Agregar al carrito</button>
       </div>
 
       <div class="tarjeta">
-        <img src="fotos/hombre/conjuntoVerano.png" alt="conjunto verano">
-        <h4>Conjunto Verano</h4>
-        <p>$39.000</p>
+        <img src="fotos/infantil/remerablanca.png" alt="Remera blanca">
+        <h4>Remera blanca</h4>
+        <p>$11.000</p>
         <button>Agregar al carrito</button>
       </div>
 
       <div class="tarjeta">
-        <img src="fotos/hombre/antiHéroe.png" alt="remera batman">
-        <h4>Remera Héroe</h4>
-        <p>$19.000</p>
+        <img src="fotos/infantil/camperainviernouno.png" alt="Campera invierno">
+        <h4>Camepra invierno militar</h4>
+        <p>$45.000</p>
         <button>Agregar al carrito</button>
       </div>
 
       <div class="tarjeta">
-        <img src="fotos/hombre/remeraHéroe.png" alt="remera joker">
-        <h4>Remera Anti-Héroe</h4>
-        <p>$19.000</p>
+        <img src="fotos/infantil/camperauno.png" alt="Campera marron">
+        <h4>Campera marron</h4>
+        <p>$13.500</p>
         <button>Agregar al carrito</button>
       </div>
 
       <div class="tarjeta">
-        <img src="fotos/hombre/remeraCampeón.png" alt="remera messi">
-        <h4>Remera Campeón</h4>
-        <p>$19.000</p>
+        <img src="fotos/infantil/camperaspider.png" alt="Campera spider">
+        <h4>Campera spiderman</h4>
+        <p>$14.000</p>
         <button>Agregar al carrito</button>
       </div>
 
       <div class="tarjeta">
-        <img src="fotos/hombre/remeraBandido.png" alt="remera shelby">
-        <h4>Remera Bandido</h4>
-        <p>$19.000</p>
+        <img src="fotos/infantil/camperados.png" alt="Campera gris">
+        <h4>Campera gris</h4>
+        <p>$13.500</p>
+        <button>Agregar al carrito</button>
+      </div>
+
+      <div class="tarjeta">
+        <img src="fotos/infantil/remeraenterisa.png" alt="Remera enteriza">
+        <h4>Remera enteriza</h4>
+        <p>$10.500</p>
+        <button>Agregar al carrito</button>
+      </div>
+
+      <div class="tarjeta">
+        <img src="fotos/infantil/enterizados.png" alt="Enteriza azul">
+        <h4>Remera enteriza azul</h4>
+        <p>$10.500</p>
+        <button>Agregar al carrito</button>
+      </div>
+
+      <div class="tarjeta">
+        <img src="fotos/infantil/enterizatres.png" alt="Producto">
+        <h4>Remera enteriza rosa</h4>
+        <p>$10.500</p>
+        <button>Agregar al carrito</button>
+      </div>
+
+      <div class="tarjeta">
+        <img src="fotos/infantil/conjuntonene.png" alt="Conjunto nene">
+        <h4>Conjunto nene</h4>
+        <p>$24.500</p>
+        <button>Agregar al carrito</button>
+      </div>
+
+      <div class="tarjeta">
+        <img src="fotos/infantil/conjuntonena.png" alt="Conjunto nena">
+        <h4>Conjunto nena</h4>
+        <p>$25.500</p>
         <button>Agregar al carrito</button>
       </div>
     </main>

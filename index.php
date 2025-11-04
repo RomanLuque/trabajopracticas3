@@ -10,15 +10,15 @@
   <div class="contenedor-login">
     <div class="caja-login">
       <h1 class="logo-login">Zona Outfit</h1>
-      <form action="paginaprincipal.html" method="get">
+      <form action="paginaprincipal.php" method="get">
         <input type="text" class="campo-login" placeholder="Correo electrónico o número de teléfono" required>
         <input type="password" class="campo-login" placeholder="Contraseña" required>
         <button type="submit" class="boton-principal">Iniciar sesión</button>
        </form>
 
-      <a href="Rcontraseña.html" class="enlace-login">¿Olvidaste tu contraseña?</a>
+      <a href="Rcontraseña.php" class="enlace-login">¿Olvidaste tu contraseña?</a>
       <hr class="separador-login">
-      <a href="crearcuenta.html" class="boton-secundario">Crear cuenta nueva</a>
+      <a href="crearcuenta.php" class="boton-secundario">Crear cuenta nueva</a>
     </div>
   </div>
 </body>
