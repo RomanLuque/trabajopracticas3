@@ -8,17 +8,18 @@
 </head>
 <body class="body-calzado">
 <nav class="barra-navegacion">
-<ul>
-        <li><a href="paginabotas.html" class="activo">Botas</a></li>
-        <li><a href="hombre.html">Hombre</a></li>
-        <li><a href="paginamujer.html">Mujer</a></li>
-        <li><a href="paginainfantil.html">Infantil</a></li>
-        <li><a href="paginacasual.html">Casual</a></li>
-        <li><a href="paginadeport.html">Deportivo</a></li>
-        <li><a class="boton-principal-paginas" href="paginaprincipal.html">ZonaOutfit</a></li>
-</ul>
 
+<ul>
+        <li><a href="paginadeport.php" class="activo">Deportivo</a></li>
+        <li><a href="hombre.php">Hombre</a></li>
+        <li><a href="paginamujer.php">Mujer</a></li>
+        <li><a href="paginainfantil.php">Infantil</a></li>
+        <li><a href="paginabotas.php">Botas</a></li>
+        <li><a href="paginacasual.php">Casual</a></li>
+        <li><a class="boton-principal-paginas" href="paginaprincipal.php">ZonaOutfit</a></li>
+</ul>
 </nav>
+
 
 
 <div class="contenedor">
@@ -31,50 +32,53 @@
         <button>Rango de precio</button>
 </div>
         </aside>
-        
+        <main class="productos">
 
+<div class="tarjeta">
+        <img src="fotos/caldeport/zapasceleste.png" alt="DeportCeles">
+        <h4>Zapatillas deportivas celeste</h4>
+        <p>$30.000</p>
+        <button>Agregar al carrito</button>
+</div>
 
+<div class="tarjeta">
+        <img src="fotos/caldeport/zapasverdeynaranja.png" alt="DeportNaranjaYVerde">
+        <h4>Zapatillas deportivas color mixto</h4>
+        <p>$29.000</p>
+        <button>Agregar al carrito</button>
+</div>
 
-<main class="productos">
 <div class="tarjeta">
-        <img src="fotos/calbotas/femmarronlargo.png" alt="BotasFemMarronLarg">
-        <h4>Botas femeninas marron largas</h4>
-        <p>$40.000</p>
+        <img src="fotos/caldeport/zapasnaranja.png" alt="DeportNaranja">
+        <h4>Zapatillas deportivas naranja</h4>
+        <p>$25.500</p>
         <button>Agregar al carrito</button>
 </div>
+
 <div class="tarjeta">
-        <img src="fotos/calbotas/mascmarron.png" alt="BotasMascMarronCort">
-        <h4>Botas masculinas marron cortas</h4>
-        <p>$39.000</p>
+        <img src="fotos/caldeport/zapasrojas.png" alt="DeportRojas">
+        <h4>Zapatillas deportivas rojas</h4>
+        <p>$30.000</p>
         <button>Agregar al carrito</button>
 </div>
+
 <div class="tarjeta">
-        <img src="fotos/calbotas/femnegcort.png" alt="BotasFemNegCort">
-        <h4>Botas femeninas negras cortas</h4>
-        <p>$50.500</p>
+        <img src="fotos/caldeport/zapasverde.png" alt="DeportVerde">
+        <h4>Zapatillas deportivas verde</h4>
+        <p>$35.250</p>
         <button>Agregar al carrito</button>
 </div>
+
 <div class="tarjeta">
-        <img src="fotos/calbotas/femneglarg.png" alt="BotasFemNegLarg">
-        <h4>Botas Femeninas Marron Largas</h4>
-        <p>$60.000</p>
-        <button>Agregar al carrito</button>
-</div>
-<div class="tarjeta">
-        <img src="fotos/calbotas/mascneg.png" alt="BotasMascNegCort">
-        <h4>Botas masculinas negras cortas</h4>
-        <p>$42.250</p>
-        <button>Agregar al carrito</button>
-</div>
-<div class="tarjeta">
-        <img src="fotos/calbotas/mixverd.png" alt="Botasmixverdcort">
-        <h4>Botas mixtas verde cortas</h4>
-        <p>$55.000</p>
+        <img src="fotos/caldeport/zapasazul.png" alt="DeportAzul">
+        <h4>Zapatillas deportivas azul</h4>
+        <p>$28.500</p>
         <button>Agregar al carrito</button>
 </div>
 
 </main>
 </div>
+</main>
 
 <footer class="foooter">
 <div class="foooter-contenedor">
@@ -91,10 +95,10 @@
 <div class="foooter-columna">
         <h4>Enlaces útiles</h4>
 <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="hombre.html">Hombre</a></li>
-        <li><a href="mujer.html">Mujer</a></li>
-        <li><a href="infantil.html">Infantil</a></li>
+        <li><a href="index.php">Inicio</a></li>
+        <li><a href="hombre.php">Hombre</a></li>
+        <li><a href="mujer.php">Mujer</a></li>
+        <li><a href="infantil.php">Infantil</a></li>
         <li><a href="#">Política de privacidad</a></li>
         <li><a href="#">Términos y condiciones</a></li>
 </ul>

@@ -16,7 +16,7 @@
         <input type="email" class="campo-login" placeholder="Correo electrónico" required>
         <button type="submit" class="boton-principal">Enviar</button>
       </form>
-      <a href="index.html" class="enlace-login">Volver al login</a>
+      <a href="index.php" class="enlace-login">Volver al login</a>
     </div>
   </div>
 </body>

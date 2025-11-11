@@ -11,7 +11,7 @@
     <div class="caja-login">
       <h2 class="logo-login">Zona Outfit</h2>
 
-      <form action="loginpag.html" method="post">
+      <form action="loginpag.php" method="post">
         <input type="text" class="campo-login" placeholder="Nombre" required>
         <input type="text" class="campo-login" placeholder="Apellido" required>
         <input type="email" class="campo-login" placeholder="Correo electrónico" required>
@@ -20,7 +20,7 @@
         <button type="submit" class="boton-principal">Crear cuenta</button>
       </form>
 
-      <a href="index.html" class="enlace-login">¿Ya tienes cuenta? Inicia sesión</a>
+      <a href="index.php" class="enlace-login">¿Ya tienes cuenta? Inicia sesión</a>
     </div>
   </div>
 </body>
