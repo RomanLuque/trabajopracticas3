@@ -1,11 +1,16 @@
 <?php
-$servidor = "localhost";
-$usuario = "root";
-$contraseña = "";
-$baseDeDatos = "zonaoutfit";
+function conectarDB() {
+    $servidor   = "localhost";
+    $usuario    = "root";
+    $contrasenia = "";
+    $baseDeDatos = "zonaoutfit"; // ← TU BASE DE DATOS ÚNICA
 
-$conexion = mysqli_connect($servidor, $usuario, $contraseña, $baseDeDatos);
+    $conexion = mysqli_connect($servidor, $usuario, $contrasenia, $baseDeDatos);
 
-if (!$conexion) {
-    die("❌ Error de conexión: " . mysqli_connect_error());
+    if (!$conexion) {
+        die("❌ Error de conexión: " . mysqli_connect_error());
+    }
+
+    return $conexion;
 }
+?>

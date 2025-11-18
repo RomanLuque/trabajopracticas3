@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+include "funciones/conexion.php";
+
+$conexion = conectarDB();
+
+$query = mysqli_query($conexion, "SELECT * FROM productos WHERE categoria = 'infantil'");
+?>
 <html lang="es">
 <head>
   <meta charset="UTF-8">

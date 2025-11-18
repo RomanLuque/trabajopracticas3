@@ -34,14 +34,14 @@
 
 <div class="tarjeta">
         <img src="fotos/calcasual/Adidasblanc.jpg" alt="CasualBlancAdidas">
-        <h4>Zapatillas bancas Adidas</h4>
+        <h4>Zapatillas blancas Adidas</h4>
         <p>$20.000</p>
         <button>Agregar al carrito</button>
 </div>
 
 <div class="tarjeta">
         <img src="fotos/calcasual/Adidaslinroj.jpg" alt="CasualBlancLineasRojAdidas">
-        <h4>Zatillas blancas y rojas Adidas</h4>
+        <h4>Zapatillas blancas y rojas Adidas</h4>
         <p>$23.000</p>
         <button>Agregar al carrito</button>
 </div>
@@ -62,7 +62,7 @@
 
 <div class="tarjeta">
         <img src="fotos/calcasual/Nblanc.jpg" alt="CasualBlancN">
-        <h4>Zapatillas Blancas N</h4>
+        <h4>Zapatillas Blancas NB</h4>
         <p>$21.300</p>
         <button>Agregar al carrito</button>
 </div>
