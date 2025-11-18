@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+include "funciones/conexion.php";
+
+$conexion = conectarDB();
+
+$query = mysqli_query($conexion, "SELECT * FROM productos WHERE id_categoria = 3 AND estado = 1");
+?>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -13,9 +20,9 @@
       <li><a href="paginainfantil.php">Infantil</a></li>
       <li><a href="hombre.php">Hombre</a></li>
       <li><a href="paginamujer.php">Mujer</a></li>
-      <li><a href="paginabotas.php">Botas</a></li>
       <li><a href="paginacasual.php">Casual</a></li>
       <li><a href="paginadeport.php" class="activo">Deportivo</a></li>
+      <li><a href="paginabotas.php">CRUD</a></li>
       <li><a class="boton-principal-paginas" href="paginaprincipal.php">ZonaOutfit</a></li>
     </ul>
 </nav>
@@ -34,48 +41,15 @@
         </aside>
         <main class="productos">
 
-<div class="tarjeta">
-        <img src="fotos/caldeport/zapasceleste.png" alt="DeportCeles">
-        <h4>Zapatillas deportivas celeste</h4>
-        <p>$30.000</p>
-        <button>Agregar al carrito</button>
-</div>
-
-<div class="tarjeta">
-        <img src="fotos/caldeport/zapasverdeynaranja.png" alt="DeportNaranjaYVerde">
-        <h4>Zapatillas deportivas color mixto</h4>
-        <p>$29.000</p>
-        <button>Agregar al carrito</button>
-</div>
-
-<div class="tarjeta">
-        <img src="fotos/caldeport/zapasnaranja.png" alt="DeportNaranja">
-        <h4>Zapatillas deportivas naranja</h4>
-        <p>$25.500</p>
-        <button>Agregar al carrito</button>
-</div>
-
-<div class="tarjeta">
-        <img src="fotos/caldeport/zapasrojas.png" alt="DeportRojas">
-        <h4>Zapatillas deportivas rojas</h4>
-        <p>$30.000</p>
-        <button>Agregar al carrito</button>
-</div>
-
-<div class="tarjeta">
-        <img src="fotos/caldeport/zapasverde.png" alt="DeportVerde">
-        <h4>Zapatillas deportivas verde</h4>
-        <p>$35.250</p>
-        <button>Agregar al carrito</button>
-</div>
-
-<div class="tarjeta">
-        <img src="fotos/caldeport/zapasazul.png" alt="DeportAzul">
-        <h4>Zapatillas deportivas azul</h4>
-        <p>$28.500</p>
-        <button>Agregar al carrito</button>
-</div>
-
+          <?php while($row = mysqli_fetch_assoc($query)) { ?>
+        <div class="tarjeta">
+            <img src="<?php echo $row['imagen']; ?>" alt="<?php echo $row['nombre']; ?>">
+            <h4><?php echo $row['nombre']; ?></h4>
+            <p>$<?php echo number_format($row['precio'], 0, ',', '.'); ?></p>
+            <p>Talle: <?php echo $row['talle']; ?></p>
+            <button>Agregar al carrito</button>
+        </div>
+    <?php } ?>
 </main>
 </div>
 </main>

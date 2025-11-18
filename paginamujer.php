@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+include "funciones/conexion.php";
+
+$conexion = conectarDB();
+
+$query = mysqli_query($conexion, "SELECT * FROM productos WHERE id_categoria = 2 AND estado = 1");
+?>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -12,9 +19,9 @@
       <li><a href="paginainfantil.php">Infantil</a></li>
       <li><a href="hombre.php">Hombre</a></li>
       <li><a href="paginamujer.php" class="activo">Mujer</a></li>
-      <li><a href="paginabotas.php">Botas</a></li>
       <li><a href="paginacasual.php">Casual</a></li>
       <li><a href="paginadeport.php">Deportivo</a></li>
+      <li><a href="paginabotas.php">CRUD</a></li>
       <li><a class="boton-principal-paginas" href="paginaprincipal.php">ZonaOutfit</a></li>
     </ul>
   </nav>
@@ -33,194 +40,16 @@
     </aside>
 
     <main class="productos"> 
-      <div class="tarjeta"> 
-        <img src="fotos/ropa de mujer/buzo casual liso.webp" alt="buzo casual liso"> 
-        <h4>Buzo Casual Liso</h4> 
-        <p>$32.000</p> 
-        <button>Agregar al carrito</button> 
-     </div>
 
-      <div class="tarjeta">
-        <img src="fotos/ropa de mujer/buzo casual.webp" alt="buzo casual">
-        <h4>Buzo Casual</h4>
-        <p>$110.500</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/ropa de mujer/buzo largo animado.webp" alt="buzo largo animado">
-        <h4>Buzo Largo Animado</h4>
-        <p>$84.000</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/ropa de mujer/buzo micropolar animado.webp" alt="buzo micropolar animado">
-        <h4>Buzo Micropolar Animado</h4>
-        <p>$68.500</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/ropa de mujer/campera abrigo parka.webp" alt="campera abrigo parka">
-        <h4>Campera Abrigo Parka</h4>
-        <p>$79.000</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/ropa de mujer/campera eco cuero.webp" alt="eco cuero">
-        <h4>Eco Cuero</h4>
-        <p>$95.200</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/ropa de mujer/campera larga otoño.webp" alt="campera larga otoño">
-        <h4>Campera Larga Otoño</h4>
-        <p>$69.500</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/ropa de mujer/campera nova con capucha.webp" alt="campera nova con capucha">
-        <h4>Campera Nova con Capucha</h4>
-        <p>$67.000</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/ropa de mujer/campera parka juno.webp" alt="campera parka juno">
-        <h4>Campera Parka Juno</h4>
-        <p>$42.000</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/ropa de mujer/remera holgada rosa.webp" alt="remera holgada rosa">
-        <h4>Remera Holgada Rosa</h4>
-        <p>$36.000</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/ropa de mujer/remera manga corta overside.webp" alt="remera manga corta overside">
-        <h4>Remera Manga Corta Overside</h4>
-        <p>$35.000</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/ropa de mujer/remera negra topper.webp" alt="remera negra topper">
-        <h4>Remera Negra Topper</h4>
-        <p>$21.000</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/ropa de mujer/pantalon babucha mujer modal con bolsillo.webp" alt="pantalon babucha mujer modal con bolsillo">
-        <h4>Pantalon Babucha Mujer Modal con Bolsillo</h4>
-        <p>$72.000</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/ropa de mujer/pantalon dama elastico.webp" alt="pantalon dama elastico">
-        <h4>Pantalon Dama Elastico</h4>
-        <p>$101.500</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-     <div class="tarjeta">
-        <img src="fotos/ropa de mujer/pantalon engomado con bolsillos.webp" alt="pantalon engomado con bolsillos">
-        <h4>Pantalon Engomado con Bolsillos</h4>
-        <p>$201.500</p>
-        <button>Agregar al carrito</button>
-      </div>
-
+          <?php while($row = mysqli_fetch_assoc($query)) { ?>
         <div class="tarjeta">
-        <img src="fotos/ropa de mujer/pantalon jean cargo recto.webp" alt="pantalon jean cargo recto">
-        <h4>Pantalon Jean Cargo Recto</h4>
-        <p>$161.500</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-
-       <div class="tarjeta">
-        <img src="fotos/ropa de mujer/pantalon jean mom polo.webp" alt="pantalon jean mom polo">
-        <h4>Pantalon Jean Mom Polo</h4>
-        <p>$111.500</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/ropa de mujer/pantalon jean skinny tiro alto.webp" alt="pantalon jean skinny tiro alto">
-        <h4>Pantalon Jean Skinny Tiro Alto</h4>
-        <p>$101.500</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-
-     <div class="tarjeta">
-        <img src="fotos/ropa de mujer/short pollera deportiva.webp" alt="short pollera deportiva">
-        <h4>Short Pollera Deportiva</h4>
-        <p>$41.500</p>
-        <button>Agregar al carrito</button>
-      </div>
-      
-       <div class="tarjeta">
-        <img src="fotos/ropa de mujer/short bermuda de jean.webp" alt="short bermuda de jean">
-        <h4>Short Bermuda de Jean</h4>
-        <p>$21.500</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/ropa de mujer/short calza mujer running.webp" alt="short calza mujer running">
-        <h4>Short Calza Mujer Running</h4>
-        <p>$31.500</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-
-     <div class="tarjeta">
-        <img src="fotos/ropa de mujer/short ciclista tiro alto.webp" alt="short ciclista tiro alto">
-        <h4>short Ciclista Tiro Alto</h4>
-        <p>$54.500</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-
-
-
-        <div class="tarjeta">
-        <img src="fotos/ropa de mujer/pack x 3 corpiños con bretel.webp" alt="pack x 3 corpiños con bretel">
-        <h4>Pack x 3 Corpiños con Bretel</h4>
-        <p>$41.500</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/ropa de mujer/pack x 3 corpiños.webp" alt="pack x 3 corpiños">
-        <h4>Pack x 3 Corpiños</h4>
-        <p>$41.500</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-
-     <div class="tarjeta">
-        <img src="fotos/ropa de mujer/packx3 bombachas tiro corto.webp" alt="packx3 bombachas tiro corto">
-        <h4>Pack x 3 Bombachas Tiro Corto</h4>
-        <p>$31.500</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-    <div class="tarjeta">
-        <img src="fotos/ropa de mujer/packx4 de bombachas tiro alto.webp" alt="packx4 de bombachas tiro alto">
-        <h4>Pack x 4 de Bombachas Tiro alto</h4>
-        <p>$39.500</p>
-        <button>Agregar al carrito</button>
-      </div>
+            <img src="<?php echo $row['imagen']; ?>" alt="<?php echo $row['nombre']; ?>">
+            <h4><?php echo $row['nombre']; ?></h4>
+            <p>$<?php echo number_format($row['precio'], 0, ',', '.'); ?></p>
+            <p>Talle: <?php echo $row['talle']; ?></p>
+            <button>Agregar al carrito</button>
+        </div>
+    <?php } ?>
 
     </main>
   </div>

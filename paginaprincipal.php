@@ -12,10 +12,11 @@
     <div class="logo-tienda">Zona Outfit</div>
     <nav>
       <ul>
-        <li><a href="hombre.php">Hombre</a></li>
+        <li><a href="paginainfantil.php"">Infantil</a></li>
         <li><a href="paginamujer.php">Mujer</a></li>
-        <li><a href="calzado.php">Calzado</a></li>
-        <li><a href="paginainfantil.php">Infantil</a></li>
+        <li><a href="paginadeport.php">Deportivo</a></li>
+        <li><a href="paginacasual.php">Casual</a></li>
+        <li><a href="paginabotas.php">CRUD</a></li>
       </ul>
     </nav>
   </header>
@@ -38,7 +39,6 @@
       <div class="subcategorias-tienda">
         <a href="paginadeport.php">Deportivo</a>
         <a href="paginacasual.php">Casual</a>
-        <a href="paginabotas.php">Botas</a>
       </div>
     </div>
   </section>

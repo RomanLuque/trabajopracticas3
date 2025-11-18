@@ -95,12 +95,12 @@ VALUES
 INSERT INTO productos 
 (nombre, descripcion, precio, stock, id_categoria, id_genero, talle, imagen)
 VALUES
-('Zapatilla blancas Adidas', 'Zapatillas casuales blancas adidas.', 20000, 20, 4, 3, '36-42', 'fotos/calcasual/Adidasblanc.jpg'),
+('Zapatillas blancas Adidas', 'Zapatillas casuales blancas adidas.', 20000, 20, 4, 3, '36-42', 'fotos/calcasual/Adidasblanc.jpg'),
 ('Zapatillas blancas y rojas Adidas', 'Zapatillas casuales blancas y rojas adidas.', 23000, 17, 4, 3, '36-42', 'fotos/calcasual/Adidaslinroj.jpg'),
 ('Zapatillas marron Adidas', 'Zapatillas casuales marron adidas.', 25500, 25, 4, 3, '36-42', 'fotos/calcasual/Adidasmarron.jpg'),
 ('Zapatillas negras Adidas', 'Zapatillas casuales negras adidas.', 22000, 12, 4, 3, '36-42', 'fotos/calcasual/Adidasnegr.jpg'),
 ('Zapatillas Blancas NB', 'Zapatillas casuales blancas NB.', 21300, 9, 4, 3, '36-42', 'fotos/calcasual/Nblanc.jpg'),
-('Zapatillas negras nike', 'Zapatillas casuales negras nike.', 24500, 22, 4s, 3, '36-42', 'fotos/calcasual/Nikenegr.png');
+('Zapatillas negras nike', 'Zapatillas casuales negras nike.', 24500, 22, 4, 3, '36-42', 'fotos/calcasual/Nikenegr.png');
 
 
 SELECT *

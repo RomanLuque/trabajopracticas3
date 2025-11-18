@@ -4,7 +4,7 @@ include "funciones/conexion.php";
 
 $conexion = conectarDB();
 
-$query = mysqli_query($conexion, "SELECT * FROM productos WHERE categoria = 'infantil'");
+$query = mysqli_query($conexion, "SELECT * FROM productos WHERE id_categoria = 1 AND estado = 1");
 ?>
 <html lang="es">
 <head>
@@ -19,9 +19,9 @@ $query = mysqli_query($conexion, "SELECT * FROM productos WHERE categoria = 'inf
       <li><a href="paginainfantil.php" class="activo">Infantil</a></li>
       <li><a href="hombre.php">Hombre</a></li>
       <li><a href="paginamujer.php">Mujer</a></li>
-      <li><a href="paginabotas.php">Botas</a></li>
       <li><a href="paginacasual.php">Casual</a></li>
       <li><a href="paginadeport.php">Deportivo</a></li>
+      <li><a href="paginabotas.php">CRUD</a></li>
       <li><a class="boton-principal-paginas" href="paginaprincipal.php">ZonaOutfit</a></li>
     </ul>
   </nav>
@@ -39,96 +39,16 @@ $query = mysqli_query($conexion, "SELECT * FROM productos WHERE categoria = 'inf
     </aside>
 
     <main class="productos">
-      <div class="tarjeta">
-        <img src="fotos/infantil/enteronene.png" alt="Entero nene">
-        <h4>Entero nene</h4>
-        <p>$15.000</p>
-        <button>Agregar al carrito</button>
-      </div>
 
-      <div class="tarjeta">
-        <img src="fotos/infantil/enteronena.png" alt="Entero nena">
-        <h4>Entero nena</h4>
-        <p>$15.000</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/infantil/conjuntouno.png" alt="Conjunto 1">
-        <h4>Conjunto remera + short</h4>
-        <p>$27.500</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/infantil/remerablanca.png" alt="Remera blanca">
-        <h4>Remera blanca</h4>
-        <p>$11.000</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/infantil/camperainviernouno.png" alt="Campera invierno">
-        <h4>Camepra invierno militar</h4>
-        <p>$45.000</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/infantil/camperauno.png" alt="Campera marron">
-        <h4>Campera marron</h4>
-        <p>$13.500</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/infantil/camperaspider.png" alt="Campera spider">
-        <h4>Campera spiderman</h4>
-        <p>$14.000</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/infantil/camperados.png" alt="Campera gris">
-        <h4>Campera gris</h4>
-        <p>$13.500</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/infantil/remeraenterisa.png" alt="Remera enteriza">
-        <h4>Remera enteriza</h4>
-        <p>$10.500</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/infantil/enterizados.png" alt="Enteriza azul">
-        <h4>Remera enteriza azul</h4>
-        <p>$10.500</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/infantil/enterizatres.png" alt="Producto">
-        <h4>Remera enteriza rosa</h4>
-        <p>$10.500</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/infantil/conjuntonene.png" alt="Conjunto nene">
-        <h4>Conjunto nene</h4>
-        <p>$24.500</p>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <div class="tarjeta">
-        <img src="fotos/infantil/conjuntonena.png" alt="Conjunto nena">
-        <h4>Conjunto nena</h4>
-        <p>$25.500</p>
-        <button>Agregar al carrito</button>
-      </div>
+          <?php while($row = mysqli_fetch_assoc($query)) { ?>
+        <div class="tarjeta">
+            <img src="<?php echo $row['imagen']; ?>" alt="<?php echo $row['nombre']; ?>">
+            <h4><?php echo $row['nombre']; ?></h4>
+            <p>$<?php echo number_format($row['precio'], 0, ',', '.'); ?></p>
+            <p>Talle: <?php echo $row['talle']; ?></p>
+            <button>Agregar al carrito</button>
+        </div>
+    <?php } ?>
     </main>
   </div>
 

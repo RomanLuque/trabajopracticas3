@@ -1,4 +1,25 @@
 <!DOCTYPE html>
+<?php
+include "funciones/conexion.php";
+$conexion = conectarDB();
+
+$sql = "SELECT p.*, c.categoria, g.genero
+        FROM productos p
+        JOIN categoria c ON p.id_categoria = c.id_categoria
+        JOIN generos   g ON p.id_genero    = g.id_genero
+        ORDER BY p.id_producto DESC";
+$productos = mysqli_query($conexion, $sql);
+
+$categorias = mysqli_query($conexion, "SELECT * FROM categoria");
+$generos    = mysqli_query($conexion, "SELECT * FROM generos");
+
+$mensaje = "";
+if (isset($_GET['msg'])) {
+    if ($_GET['msg'] === "alta_ok")   $mensaje = "Producto agregado correctamente.";
+    if ($_GET['msg'] === "baja_ok")   $mensaje = "Producto eliminado correctamente.";
+    if ($_GET['msg'] === "modif_ok")  $mensaje = "Producto modificado correctamente.";
+}
+?>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -6,75 +27,120 @@
 <title>Tienda - calzado deport</title>
         <link rel="stylesheet" href="styles.css">
 </head>
-<body class="body-calzado">
+<body class="body-infantil">
 <nav class="barra-navegacion">
     <ul>
       <li><a href="paginainfantil.php">Infantil</a></li>
       <li><a href="hombre.php">Hombre</a></li>
       <li><a href="paginamujer.php">Mujer</a></li>
-      <li><a href="paginabotas.php" class="activo">Botas</a></li>
       <li><a href="paginacasual.php">Casual</a></li>
       <li><a href="paginadeport.php">Deportivo</a></li>
+      <li><a href="paginabotas.php" class="activo">CRUD</a></li>
       <li><a class="boton-principal-paginas" href="paginaprincipal.php">ZonaOutfit</a></li>
     </ul>
 
 </nav>
 
+<h1>Administrar productos</h1>
 
-<div class="contenedor">
-<aside class="filtros">
-<h3>Filtros</h3>
-<div class="boton-paginainfantil">
-        <button>Categoría</button>
-        <button>Disciplina</button>
-        <button>Talle</button>
-        <button>Rango de precio</button>
-</div>
-        </aside>
-        
+<?php if ($mensaje): ?>
+    <p style="color: green;"><?php echo $mensaje; ?></p>
+<?php endif; ?>
 
+<h2>Listado</h2>
+<table border="10" cellpadding="5" cellspacing="10">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Género</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Talle</th>
+            <th>Imagen</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php while ($p = mysqli_fetch_assoc($productos)): ?>
+        <tr>
+            <td><?php echo $p['id_producto']; ?></td>
+            <td><?php echo htmlspecialchars($p['nombre']); ?></td>
+            <td><?php echo htmlspecialchars($p['categoria']); ?></td>
+            <td><?php echo htmlspecialchars($p['genero']); ?></td>
+            <td>$<?php echo number_format($p['precio'], 2, ',', '.'); ?></td>
+            <td><?php echo $p['stock']; ?></td>
+            <td><?php echo htmlspecialchars($p['talle']); ?></td>
+            <td>
+                <?php if ($p['imagen']): ?>
+                    <img src="<?php echo $p['imagen']; ?>" alt="" style="width:60px;">
+                <?php endif; ?>
+            </td>
+            <td>
+                <a href="modificarProducto.php?id=<?php echo $p['id_producto']; ?>">Modificar</a>
+                |
+                <a href="funciones/baja.php?id=<?php echo $p['id_producto']; ?>"
+                   onclick="return confirm('¿Eliminar este producto?');">
+                   Eliminar
+                </a>
+            </td>
+        </tr>
+    <?php endwhile; ?>
+    </tbody>
+</table>
 
+<h2>Alta de producto</h2>
+<form action="controllers/alta.php" method="post">
+    <label>Nombre:
+        <input type="text" name="nombre" required>
+    </label><br>
 
-<main class="productos">
-<div class="tarjeta">
-        <img src="fotos/calbotas/femmarronlargo.png" alt="BotasFemMarronLarg">
-        <h4>Botas femeninas marron largas</h4>
-        <p>$40.000</p>
-        <button>Agregar al carrito</button>
-</div>
-<div class="tarjeta">
-        <img src="fotos/calbotas/mascmarron.png" alt="BotasMascMarronCort">
-        <h4>Botas masculinas marron cortas</h4>
-        <p>$39.000</p>
-        <button>Agregar al carrito</button>
-</div>
-<div class="tarjeta">
-        <img src="fotos/calbotas/femnegcort.png" alt="BotasFemNegCort">
-        <h4>Botas femeninas negras cortas</h4>
-        <p>$50.500</p>
-        <button>Agregar al carrito</button>
-</div>
-<div class="tarjeta">
-        <img src="fotos/calbotas/femneglarg.png" alt="BotasFemNegLarg">
-        <h4>Botas Femeninas Marron Largas</h4>
-        <p>$60.000</p>
-        <button>Agregar al carrito</button>
-</div>
-<div class="tarjeta">
-        <img src="fotos/calbotas/mascneg.png" alt="BotasMascNegCort">
-        <h4>Botas masculinas negras cortas</h4>
-        <p>$42.250</p>
-        <button>Agregar al carrito</button>
-</div>
-<div class="tarjeta">
-        <img src="fotos/calbotas/mixverd.png" alt="Botasmixverdcort">
-        <h4>Botas mixtas verde cortas</h4>
-        <p>$55.000</p>
-        <button>Agregar al carrito</button>
-</div>
+    <label>Descripción:
+        <input type="text" name="descripcion">
+    </label><br>
 
-</main>
-</div>
+    <label>Precio:
+        <input type="number" step="0.01" min="0" name="precio" required>
+    </label><br>
+
+    <label>Stock:
+        <input type="number" min="0" name="stock" required>
+    </label><br>
+
+    <label>Categoría:
+        <select name="id_categoria" required>
+            <option value="">-- seleccionar --</option>
+            <?php while ($c = mysqli_fetch_assoc($categorias)): ?>
+                <option value="<?php echo $c['id_categoria']; ?>">
+                    <?php echo htmlspecialchars($c['categoria']); ?>
+                </option>
+            <?php endwhile; ?>
+        </select>
+    </label><br>
+
+    <label>Género:
+        <select name="id_genero" required>
+            <option value="">-- seleccionar --</option>
+            <?php while ($g = mysqli_fetch_assoc($generos)): ?>
+                <option value="<?php echo $g['id_genero']; ?>">
+                    <?php echo htmlspecialchars($g['genero']); ?>
+                </option>
+            <?php endwhile; ?>
+        </select>
+    </label><br>
+
+    <label>Talle:
+        <input type="text" name="talle">
+    </label><br>
+
+    <label>Ruta de imagen:
+        <input type="text" name="imagen" placeholder="fotos/infantil/enteronene.png">
+    </label><br>
+
+    <button type="submit">Guardar producto</button>
+</form>
+
 
 <footer class="foooter">
 <div class="foooter-contenedor">
@@ -117,3 +183,4 @@
 </footer>
 </body>
 </html>
+<?php mysqli_close($conexion); ?>
