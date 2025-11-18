@@ -9,9 +9,9 @@
 <body class="body-mujer">
   <nav class="barra-navegacion">
     <ul>
-      <li><a href="paginamujer.php" class="activo">Mujer</a></li>
       <li><a href="paginainfantil.php">Infantil</a></li>
       <li><a href="hombre.php">Hombre</a></li>
+      <li><a href="paginamujer.php" class="activo">Mujer</a></li>
       <li><a href="paginabotas.php">Botas</a></li>
       <li><a href="paginacasual.php">Casual</a></li>
       <li><a href="paginadeport.php">Deportivo</a></li>

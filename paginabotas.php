@@ -8,15 +8,15 @@
 </head>
 <body class="body-calzado">
 <nav class="barra-navegacion">
-<ul>
-        <li><a href="paginabotas.php" class="activo">Botas</a></li>
-        <li><a href="hombre.php">Hombre</a></li>
-        <li><a href="paginamujer.php">Mujer</a></li>
-        <li><a href="paginainfantil.php">Infantil</a></li>
-        <li><a href="paginacasual.php">Casual</a></li>
-        <li><a href="paginadeport.php">Deportivo</a></li>
-        <li><a class="boton-principal-paginas" href="paginaprincipal.php">ZonaOutfit</a></li>
-</ul>
+    <ul>
+      <li><a href="paginainfantil.php">Infantil</a></li>
+      <li><a href="hombre.php">Hombre</a></li>
+      <li><a href="paginamujer.php">Mujer</a></li>
+      <li><a href="paginabotas.php" class="activo">Botas</a></li>
+      <li><a href="paginacasual.php">Casual</a></li>
+      <li><a href="paginadeport.php">Deportivo</a></li>
+      <li><a class="boton-principal-paginas" href="paginaprincipal.php">ZonaOutfit</a></li>
+    </ul>
 
 </nav>
 
