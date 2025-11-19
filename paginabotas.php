@@ -61,7 +61,7 @@ if (isset($_GET['msg'])) {
             <th>Imagen</th>
             <th>Acciones</th>
         </tr>
-    </thead>
+     </thead>
     <tbody>
     <?php while ($p = mysqli_fetch_assoc($productos)): ?>
         <tr>
@@ -80,7 +80,7 @@ if (isset($_GET['msg'])) {
             <td>
                 <a href="modificarProducto.php?id=<?php echo $p['id_producto']; ?>">Modificar</a>
                 |
-                <a href="funciones/baja.php?id=<?php echo $p['id_producto']; ?>"
+                <a href="controllers/baja.php?id_producto=<?php echo $p['id_producto']; ?>"
                    onclick="return confirm('¿Eliminar este producto?');">
                    Eliminar
                 </a>

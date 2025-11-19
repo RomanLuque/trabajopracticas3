@@ -102,8 +102,7 @@ VALUES
 ('Zapatillas Blancas NB', 'Zapatillas casuales blancas NB.', 21300, 9, 4, 3, '36-42', 'fotos/calcasual/Nblanc.jpg'),
 ('Zapatillas negras nike', 'Zapatillas casuales negras nike.', 24500, 22, 4, 3, '36-42', 'fotos/calcasual/Nikenegr.png');
 
-
-ALTER TABLE productos ADD estado TINYINT(1) NOT NULL DEFAULT 1;
+ALTER TABLE productos ADD estados TINYINT(1) NOT NULL DEFAULT 1;
 
 SELECT *
 FROM productos;
